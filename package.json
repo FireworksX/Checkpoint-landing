@@ -1,0 +1,33 @@
+{
+  "name": "checkpoint-langing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cc": "create-component"
+  },
+  "dependencies": {
+    "helmet": "^5.1.1",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "18.6.4",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@types/react-helmet": "^6.1.5",
+    "@types/styled-components": "^5.1.25",
+    "blueprint-templates-cli": "^0.1.13",
+    "create-component": "^0.1.2",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "prettier": "^2.7.1",
+    "typescript": "4.7.4"
+  }
+}
