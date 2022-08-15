@@ -8,12 +8,13 @@ export const Root = styled.section`
 `
 
 export const Image = styled.div`
-  width: 30vw;
+  width: calc(100% - ${({ theme }) => theme.baseStyles.paddings.gutterDesktop});
   height: 400px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: -100px;
+  max-width: 600px;
   background: ${({ theme }) => theme.colors.background.first};
 `
 

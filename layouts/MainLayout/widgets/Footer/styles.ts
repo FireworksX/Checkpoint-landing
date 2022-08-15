@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Container from 'components/Container/Container'
+import { scRespondTo } from 'styles/theme/respond'
 
 export const Root = styled.div`
   padding: 50px 0;
@@ -8,8 +9,12 @@ export const Root = styled.div`
 
 export const Wrapper = styled(Container)`
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 30px;
+
+  ${scRespondTo.sm} {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 `
 
 export const Logo = styled.div`

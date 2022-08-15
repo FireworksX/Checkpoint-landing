@@ -13,7 +13,7 @@ const breakpointsKeys = Object.keys(BREAKPOINTS)
 
 export const scRespondTo = breakpointsKeys.reduce<any>((accumulator, label) => {
   accumulator[label] = css`
-    @media (min-width: ${BREAKPOINTS[label as 'sm']}px);
+    @media (min-width: ${BREAKPOINTS[label as 'sm']}px)
   `
   return accumulator
 }, {}) as { [P in keyof typeof BREAKPOINTS]: any }

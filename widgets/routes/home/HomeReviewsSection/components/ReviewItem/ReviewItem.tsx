@@ -3,10 +3,13 @@ import Image from 'next/Image'
 import * as Styled from './styles'
 
 interface ReviewItemProps {
+  text: string
+  name: string
+  deal: string
   className?: string
 }
 
-const ReviewItem: FC<ReviewItemProps> = ({ className }) => {
+const ReviewItem: FC<ReviewItemProps> = ({ className, text, name, deal }) => {
   return (
     <Styled.Root className={className}>
       <Styled.Rates>
@@ -17,15 +20,15 @@ const ReviewItem: FC<ReviewItemProps> = ({ className }) => {
         <Styled.Rate src='/images/star-filled.svg' alt='' />
       </Styled.Rates>
       <Styled.Text>
-        “My wife and I are going on honeymoon, Travis allows us to plan trips together, finally!”
+        “{text}”
       </Styled.Text>
       <Styled.User>
         <Styled.Avatar>
-            <Image/>
+          <Image />
         </Styled.Avatar>
         <div>
-          <Styled.Name>Lawrence R.</Styled.Name>
-          <Styled.Deal>Recently married who doesn't normally plan</Styled.Deal>
+          <Styled.Name>{name}</Styled.Name>
+          <Styled.Deal>{deal}</Styled.Deal>
         </div>
       </Styled.User>
     </Styled.Root>

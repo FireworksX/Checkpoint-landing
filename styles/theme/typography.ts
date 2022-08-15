@@ -3,6 +3,10 @@ import { css } from 'styled-components'
 const typography = {
   fontFamily: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`,
+  text_38_44: {
+    fontSize: '38px',
+    lineHeight: '44px'
+  },
   text_32_38: {
     fontSize: '32px',
     lineHeight: '38px'

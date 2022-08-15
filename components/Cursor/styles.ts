@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { scRespondTo } from 'styles/theme/respond'
 import { CursorProps } from './Cursor'
 
 interface Props {
@@ -73,13 +74,17 @@ export const Root = styled.div<Props>`
   padding: 10px 15px 10px 10px;
   display: inline-flex;
   align-items: center;
-  ${({ theme }) => theme.typography.text_14_20};
+  ${({ theme }) => theme.typography.text_12_16};
   color: ${({ theme }) => theme.colors.typography.first};
   background: ${({ theme }) => theme.colors.accent.second};
   font-weight: 400;
 
   ${({ direction }) => directions[direction || 'left']}
   ${({ scheme }) => scheme && colors[scheme]}
+  
+  ${scRespondTo.sm} {
+    ${({ theme }) => theme.typography.text_14_24};
+  }
 `
 
 export const Avatar = styled.div`
