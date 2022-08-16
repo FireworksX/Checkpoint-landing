@@ -5,6 +5,7 @@ const colors = {
     second: '#1D2026',
     third: '#242830',
     fourth: '#2C3039',
+    fifth: '#0e0b0b',
   },
 
   accent: {

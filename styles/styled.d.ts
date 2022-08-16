@@ -13,6 +13,7 @@ declare module 'styled-components' {
       fontFamily: string
       textEllipsis: string
 
+      text_48_54: TypographySizeType
       text_38_44: TypographySizeType
       text_32_38: TypographySizeType
       text_26_30: TypographySizeType
