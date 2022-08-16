@@ -2,31 +2,13 @@ import { useEffect } from 'react'
 import { NextPage } from 'next'
 import * as Styled from './styles'
 import Container from 'components/Container/Container'
-import Button from 'components/Button/Button'
 import { reveal } from 'utils/reveal'
-import {
-  GifBaby,
-  GifCartoon,
-  GifFallingHole,
-  GifStoneAge,
-  GifStop,
-  MeetCover,
-  SocialCover,
-  SolutionCover
-} from './styles'
-
-const BOTTOM_REVEALS = ['.WhyTitle', '.WhyDescription']
+import ActionButton from 'components/ActionButton/ActionButton'
 
 const About: NextPage = () => {
   useEffect(() => {
-    console.log(Styled.WhyTitle.styledComponentId)
-    // reveal('.cursorSearch', {
-    //   distance: '200px',
-    //   origin: 'right'
-    // })
-    //
     reveal('.WhyImage')
-    //
+
     reveal('.BottomReveal', {
       origin: 'bottom',
       distance: '60px'
@@ -62,7 +44,7 @@ const About: NextPage = () => {
         <Styled.GifBaby />
         <Styled.GifStop />
         <Container>
-          <Styled.SolutionCover src='/images/angry_cartoon.gif'/>
+          <Styled.SolutionCover src='/images/angry_cartoon.gif' />
           <Styled.SolutionTitle className='BottomReveal'>
             Но почему так мучительно трудно искать новые места для посещения?
           </Styled.SolutionTitle>
@@ -88,7 +70,7 @@ const About: NextPage = () => {
         <Styled.GifStoneAge />
         <Styled.GifFallingHole />
         <Container>
-          <Styled.SocialCover src='/images/stone_age_cartoon.gif'/>
+          <Styled.SocialCover src='/images/stone_age_cartoon.gif' />
           <Styled.SocialTitle className='BottomReveal'>Дилемма социальных сетей и мессенджеров</Styled.SocialTitle>
           <Styled.SocialDescription className='BottomReveal'>
             Любой, кто пытался спланировать места для посещений с помощью социальных сетей или мессенджеров, знает, что
@@ -101,7 +83,7 @@ const About: NextPage = () => {
 
       <Styled.MeetSection>
         <Container>
-          <Styled.MeetCover src='/images/minion.gif'/>
+          <Styled.MeetCover src='/images/minion.gif' />
           <Styled.MeetTitle className='BottomReveal'>
             Познакомьтесь с CheckPoint. Мы поможем вам найти новые крутые места для посещения.
           </Styled.MeetTitle>
@@ -200,7 +182,7 @@ const About: NextPage = () => {
         <Container>
           <Styled.ReadyTitle className='BottomReveal'>Ваши следующие лучшие идеи вы возьмете здесь.</Styled.ReadyTitle>
           <Styled.ButtonWrapper className='BottomReveal'>
-            <Button scheme='primary'>⚡️ Начать сейчас</Button>
+            <ActionButton>⚡️ Начать сейчас</ActionButton>
           </Styled.ButtonWrapper>
         </Container>
       </Styled.ReadySection>

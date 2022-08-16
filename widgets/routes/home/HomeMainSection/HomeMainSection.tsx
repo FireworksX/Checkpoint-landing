@@ -3,8 +3,8 @@ import Typed from 'react-typed'
 import Image from 'next/Image'
 import * as Styled from './styles'
 import Container from 'components/Container/Container'
-import Button from 'components/Button/Button'
 import { reveal } from 'utils/reveal'
+import ActionButton from 'components/ActionButton/ActionButton'
 
 interface HomeMainSectionProps {
   className?: string
@@ -46,20 +46,15 @@ const HomeMainSection: FC<HomeMainSectionProps> = ({ className }) => {
         <Styled.Title>Узнайте лучшее</Styled.Title>
 
         <Styled.Typing>
-          <Typed
-            strings={['в любом городе', 'вместе с друзьями', 'для себя']}
-            typeSpeed={100}
-            backSpeed={100}
-            loop
-          />
+          <Typed strings={['в любом городе', 'вместе с друзьями', 'для себя']} typeSpeed={100} backSpeed={100} loop />
         </Styled.Typing>
         <Styled.Description>Самый простой способ делиться с друзьями </Styled.Description>
 
         <Styled.ButtonWrapper>
-          <Button scheme='primary'>⚡️ Начать сейчас</Button>
+          <ActionButton>⚡️ Начать сейчас</ActionButton>
         </Styled.ButtonWrapper>
 
-        <Styled.Cover></Styled.Cover>
+        <Styled.Cover />
       </Container>
     </Styled.Root>
   )

@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import * as Styled from './styles'
-import Button from 'components/Button/Button'
 import { reveal } from 'utils/reveal'
+import ActionButton from "components/ActionButton/ActionButton";
 
 interface HomeEndSectionProps {
   className?: string
@@ -22,7 +22,7 @@ const HomeEndSection: FC<HomeEndSectionProps> = ({ className }) => {
       <Styled.Wrapper className='endWrapper'>
         <Styled.Title>Сделай жизнь яркой</Styled.Title>
         <Styled.ButtonWrapper>
-          <Button scheme='primary'>️️⚡️ Начать сейчас</Button>
+          <ActionButton>️️⚡️ Начать сейчас</ActionButton>
         </Styled.ButtonWrapper>
       </Styled.Wrapper>
     </Styled.Root>

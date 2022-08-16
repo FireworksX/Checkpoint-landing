@@ -1,8 +1,8 @@
 import { FC, useEffect } from 'react'
 import * as Styled from './styles'
 import Container from 'components/Container/Container'
-import Button from 'components/Button/Button'
 import { reveal } from 'utils/reveal'
+import ActionButton from "components/ActionButton/ActionButton";
 
 interface HomeFeaturesProps {
   className?: string
@@ -68,7 +68,7 @@ const HomeFeatures: FC<HomeFeaturesProps> = () => {
                 </Styled.Item>
               </Styled.List>
               <Styled.ButtonWrapper>
-                <Button scheme='primary'>️️⚡️ Найти лучшее</Button>
+                <ActionButton>️️⚡️ Найти лучшее</ActionButton>
               </Styled.ButtonWrapper>
             </div>
             <Styled.Image />
@@ -99,7 +99,7 @@ const HomeFeatures: FC<HomeFeaturesProps> = () => {
                 </Styled.Item>
               </Styled.List>
               <Styled.ButtonWrapper>
-                <Button scheme='primary'>️️⚡️ Добавить друзей</Button>
+                <ActionButton>️️⚡️ Добавить друзей</ActionButton>
               </Styled.ButtonWrapper>
             </div>
           </Styled.Wrapper>
@@ -124,7 +124,7 @@ const HomeFeatures: FC<HomeFeaturesProps> = () => {
                 </Styled.Item>
               </Styled.List>
               <Styled.ButtonWrapper>
-                <Button scheme='primary'>️️⚡️ Начать сейчас</Button>
+                <ActionButton>️️⚡️ Начать сейчас</ActionButton>
               </Styled.ButtonWrapper>
             </div>
             <Styled.Image />
