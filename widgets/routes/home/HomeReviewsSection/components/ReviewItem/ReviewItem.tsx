@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import Image from 'next/Image'
 import * as Styled from './styles'
 
 interface ReviewItemProps {

@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 import Typed from 'react-typed'
-import Image from 'next/Image'
+import Image from 'next/image'
 import * as Styled from './styles'
 import Container from 'components/Container/Container'
 import { reveal } from 'utils/reveal'
