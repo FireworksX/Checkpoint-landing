@@ -1,9 +1,12 @@
 import ScrollRevealObjectOptions = scrollReveal.ScrollRevealObjectOptions
+import { isBrowser } from './isBrowser'
 
 export const reveal = async (
   selector: string | HTMLElement | NodeListOf<Element>,
   options?: ScrollRevealObjectOptions
 ) => {
-  const scrollReveal = (await import('scrollreveal')).default
-  scrollReveal().reveal(selector, options || {})
+  if (isBrowser) {
+    const scrollReveal = (await import('scrollreveal')).default
+    scrollReveal().reveal(selector, options || {})
+  }
 }

@@ -19,13 +19,9 @@ const ReviewItem: FC<ReviewItemProps> = ({ className, text, name, deal }) => {
         <Styled.Rate src='/images/star-filled.svg' alt='' />
         <Styled.Rate src='/images/star-filled.svg' alt='' />
       </Styled.Rates>
-      <Styled.Text>
-        “{text}”
-      </Styled.Text>
+      <Styled.Text>“{text}”</Styled.Text>
       <Styled.User>
-        <Styled.Avatar>
-          <Image />
-        </Styled.Avatar>
+        <Styled.Avatar />
         <div>
           <Styled.Name>{name}</Styled.Name>
           <Styled.Deal>{deal}</Styled.Deal>

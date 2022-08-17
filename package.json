@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "cc": "create-component",
-    "deploy": "git pull & yarn & yarn build & pm2 restart checkpoint-landing"
+    "deploy": "git pull && yarn && yarn build && pm2 restart checkpoint-landing"
   },
   "dependencies": {
     "helmet": "^5.1.1",
