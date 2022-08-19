@@ -12,31 +12,21 @@ interface HomeMainSectionProps {
 
 const HomeMainSection: FC<HomeMainSectionProps> = ({ className }) => {
   useEffect(() => {
-    reveal('.cursorSearch', {
-      distance: '200px',
-      origin: 'right'
-    })
-
-    reveal('.cursorAdd', {
-      distance: '200px',
-      origin: 'left'
-    })
-
-    reveal('.cursorCheck', {
-      distance: '200px',
+    reveal('.RevealBottom', {
+      distance: '20px',
       origin: 'bottom'
     })
   }, [])
 
   return (
     <Styled.Root className={className}>
-      <Styled.CursorSearch className='cursorSearch'>Cool! Let me find a cafe in this area</Styled.CursorSearch>
-      <Styled.CursorAdd className='cursorAdd' scheme='green' direction='right' avatarType={2}>
-        I just added another day to our tags
-      </Styled.CursorAdd>
-      <Styled.CursorCheck className='cursorCheck' scheme='orange' direction='right' avatarType={3}>
-        Heya, I just saved this lodge, check it
-      </Styled.CursorCheck>
+        <Styled.CursorSearch className='RevealBottom'>Cool! Let me find a cafe in this area</Styled.CursorSearch>
+        <Styled.CursorAdd className='RevealBottom' scheme='green' direction='right' avatarType={2}>
+          I just added another day to our tags
+        </Styled.CursorAdd>
+        <Styled.CursorCheck className='RevealBottom' scheme='orange' direction='right' avatarType={3}>
+          Heya, I just saved this lodge, check it
+        </Styled.CursorCheck>
 
       <Container>
         <Styled.Heart>

@@ -87,7 +87,7 @@ export const PurposeTitle = styled.div`
 
 export const PurposeValue = styled.h2`
   color: ${({ theme }) => theme.colors.typography.first};
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
 
   ${scRespondTo.sm} {
@@ -116,7 +116,7 @@ export const SolutionCover = styled.img`
 
 export const SolutionTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.first};
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
   margin-bottom: 15px;
 
@@ -139,7 +139,7 @@ export const DnaSection = styled(BaseSection)`
 
 export const DnaTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.fourth};
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
   margin-bottom: 25px;
 
@@ -173,7 +173,7 @@ export const SocialCover = styled.img`
 
 export const SocialTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.first};
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
   margin-bottom: 25px;
 
@@ -203,16 +203,20 @@ export const MeetItem = styled.li`
 `
 
 export const MeetCover = styled.img`
-  width: 350px;
+  width: 100%;
   height: 165px;
   border-radius: ${({ theme }) => theme.baseStyles.radius.radiusMain};
   overflow: hidden;
   margin-bottom: 30px;
+
+  ${scRespondTo.sm} {
+    width: 350px;
+  }
 `
 
 export const MeetTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.first};
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
   margin-bottom: 25px;
 
@@ -233,7 +237,7 @@ export const FactsSections = styled(BaseSection)`
 export const FactsTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.first};
   margin-bottom: 50px;
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
 
   ${scRespondTo.sm} {
@@ -278,7 +282,7 @@ export const TeamSection = styled(BaseSection)`
 export const TeamTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.fourth};
   margin-bottom: 25px;
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
   font-weight: 800;
 
   ${scRespondTo.sm} {
@@ -343,7 +347,7 @@ export const ReadyTitle = styled(TitleContainer).attrs({ as: 'h2' })`
   color: ${({ theme }) => theme.colors.typography.fourth};
   font-weight: 800;
   margin-bottom: 25px;
-  ${({ theme }) => theme.typography.text_32_38};
+  ${({ theme }) => theme.typography.text_26_30};
 
   ${scRespondTo.sm} {
     ${({ theme }) => theme.typography.text_48_54};

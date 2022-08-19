@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import * as Styled from './styles'
 import Container from 'components/Container/Container'
 import { reveal } from 'utils/reveal'
-import ActionButton from "components/ActionButton/ActionButton";
+import ActionButton from 'components/ActionButton/ActionButton'
 
 interface HomeFeaturesProps {
   className?: string
@@ -10,16 +10,12 @@ interface HomeFeaturesProps {
 
 const HomeFeatures: FC<HomeFeaturesProps> = () => {
   useEffect(() => {
-    reveal('.section_save, .section_organize, .section_friends', {
-      distance: '200px',
+    reveal('.RevealBottom', {
+      distance: '20px',
       origin: 'bottom'
     })
 
-    reveal('.fragmentOne', {
-      delay: 300,
-      distance: '20px',
-      origin: 'right'
-    })
+    reveal('.fragmentOne')
 
     reveal('.fragmentTwo', {
       delay: 400,
@@ -27,26 +23,11 @@ const HomeFeatures: FC<HomeFeaturesProps> = () => {
       origin: 'left'
     })
 
-    reveal('.fragmentThree', {
-      delay: 400,
-      distance: '20px',
-      origin: 'right'
-    })
-
-    reveal('.cursorSave', {
-      distance: '20px',
-      origin: 'right'
-    })
-
-    reveal('.cursorOrganize', {
-      distance: '20px',
-      origin: 'bottom'
-    })
   }, [])
 
   return (
     <>
-      <Styled.Section className='section_save'>
+      <Styled.Section className='RevealBottom'>
         <Styled.CursorSave className='cursorSave' scheme='pink' avatarType={3}>
           Just saved this directly from Insta 😉
         </Styled.CursorSave>
@@ -76,8 +57,8 @@ const HomeFeatures: FC<HomeFeaturesProps> = () => {
         </Container>
       </Styled.Section>
 
-      <Styled.Section className='section_organize'>
-        <Styled.CursorOrganize className='cursorOrganize' scheme='green' avatarType={4}>
+      <Styled.Section className='RevealBottom'>
+        <Styled.CursorOrganize className='RevealBottom' scheme='green' avatarType={4}>
           New here, anyone got <br /> recommendations in Santiago?
         </Styled.CursorOrganize>
 
@@ -106,8 +87,8 @@ const HomeFeatures: FC<HomeFeaturesProps> = () => {
         </Container>
       </Styled.Section>
 
-      <Styled.Section className='section_friends'>
-        <Styled.FragmentThree className='fragmentThree' src='/images/line-3.svg' alt='' />
+      <Styled.Section className='RevealBottom'>
+        <Styled.FragmentThree className='RevealBottom' src='/images/line-3.svg' alt='' />
         <Container>
           <Styled.Wrapper scheme='friends'>
             <div>

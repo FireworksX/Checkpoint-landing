@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from 'styled-components'
-import Cursor from '../../../../components/Cursor/Cursor'
-import { scRespondTo } from '../../../../styles/theme/respond'
+import Cursor from 'components/Cursor/Cursor'
+import { scRespondTo } from 'styles/theme/respond'
 
 interface Props {
   scheme?: 'save' | 'friends' | 'organize'
@@ -84,7 +84,7 @@ export const ButtonWrapper = styled.div`
 export const CursorSave = styled(Cursor)`
   width: 200px;
   position: absolute;
-  left: 40%;
+  left: 35%;
   bottom: -3%;
   z-index: 1;
 

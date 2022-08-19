@@ -12,17 +12,17 @@ const Header: FC<HeaderProps> = ({ className }) => {
 
   return (
     <Styled.Root className={className}>
-      <Styled.Wrapper>
-        <Styled.Logo />
-        <Styled.Navigation>
-          <Link href='/' passHref>
-            <Styled.NavigationCell isActive={pathname === '/'}>Home</Styled.NavigationCell>
-          </Link>
-          <Link href='/about' passHref>
-            <Styled.NavigationCell isActive={pathname === '/about'}>About</Styled.NavigationCell>
-          </Link>
-        </Styled.Navigation>
-      </Styled.Wrapper>
+        <Styled.Wrapper>
+          <Styled.Logo />
+          <Styled.Navigation>
+            <Link href='/' passHref>
+              <Styled.NavigationCell isActive={pathname === '/'}>Главная</Styled.NavigationCell>
+            </Link>
+            <Link href='/about' passHref>
+              <Styled.NavigationCell isActive={pathname === '/about'}>О нас</Styled.NavigationCell>
+            </Link>
+          </Styled.Navigation>
+        </Styled.Wrapper>
     </Styled.Root>
   )
 }

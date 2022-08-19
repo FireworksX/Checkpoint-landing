@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Container from 'components/Container/Container'
+import { scRespondTo } from '../../../../styles/theme/respond'
 
 interface Props {
   isActive?: boolean
@@ -14,16 +15,17 @@ export const Root = styled.header`
 `
 
 export const Wrapper = styled(Container)`
-  display: grid;
-  grid-template-columns: 200px 5fr 1fr;
-  grid-gap: 30px;
+  display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 `
 
 export const Logo = styled.div`
   height: 50px;
   border-radius: ${({ theme }) => theme.baseStyles.radius.radiusMain};
+  display: none;
 `
 
 export const Navigation = styled.nav`
