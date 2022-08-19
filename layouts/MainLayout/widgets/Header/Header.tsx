@@ -21,6 +21,9 @@ const Header: FC<HeaderProps> = ({ className }) => {
             <Link href='/about' passHref>
               <Styled.NavigationCell isActive={pathname === '/about'}>О нас</Styled.NavigationCell>
             </Link>
+            <Link href='/donate' passHref>
+              <Styled.NavigationCell isActive={pathname === '/donate'}>Поддержать</Styled.NavigationCell>
+            </Link>
           </Styled.Navigation>
         </Styled.Wrapper>
     </Styled.Root>

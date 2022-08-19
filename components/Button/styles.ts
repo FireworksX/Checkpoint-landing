@@ -14,6 +14,15 @@ const themeByScheme = {
     &:hover {
       transform: scale(1.1);
     }
+  `,
+  primaryReverse: css`
+    border-radius: 40px;
+    background: ${({ theme }) => theme.colors.typography.first};
+    color: ${({ theme }) => theme.colors.background.first};
+
+    &:hover {
+      transform: scale(1.1);
+    }
   `
 }
 

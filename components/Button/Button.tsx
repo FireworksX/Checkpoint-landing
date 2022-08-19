@@ -4,7 +4,7 @@ import * as Styled from './styles'
 export interface ButtonProps {
   className?: string
   children: ReactNode
-  scheme?: 'primary'
+  scheme?: 'primary' | 'primaryReverse'
 }
 
 const Button: FC<ButtonProps> = ({ className, children, scheme }) => {

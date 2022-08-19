@@ -14,7 +14,8 @@ const baseStyles = {
   },
   radius: {
     radiusMain: '10px',
-    radiusSecond: '2px'
+    radiusSecond: '2px',
+    radiusThird: '20px'
   },
   paddings: {
     gutterMobile: '15px',
