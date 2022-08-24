@@ -2,6 +2,8 @@ import { FC, useMemo, useState } from 'react'
 import * as Styled from './styles'
 import Container from 'components/Container/Container'
 import Button from 'components/Button/Button'
+import { Features, FeaturesDescription, FeaturesList, Sponsors, SponsorsWrapper } from './styles'
+import SponsorCard from './components/SponsorCard/SponsorCard'
 
 interface DonateRouteProps {
   className?: string
@@ -38,39 +40,80 @@ const DonateRoute: FC<DonateRouteProps> = ({ className }) => {
               value={amount}
               onChange={({ target: { value } }) => setAmount(+value)}
             />
-            <Styled.DonateButton scheme='primary'>Пожертвовать</Styled.DonateButton>
+            <a href='https://sponsr.ru/check_point' target='_blank'>
+              <Styled.DonateButton scheme='primary'>❤️ Пожертвовать</Styled.DonateButton>
+            </a>
           </Styled.DonateWrapper>
         </Container>
       </Styled.Main>
 
-      <Styled.Possibility>
+      <Styled.Motivation>
         <Container>
-          <Styled.PossibilityTitle>Возможности спонсоров</Styled.PossibilityTitle>
+          <Styled.MotivationDescription>
+            Наш проект создан для того, чтобы <b>сделать нашу жизнь удобней и ярче!</b> Благодаря нашему приложению вы
+            будете тратить намного меньше времени для обмена локациями с друзьями. Также вы привнесете{' '}
+            <i>свое, лучшее и именно то</i>, что поможет другим. Помогая нам, <b>вы экономите свое время </b> - наш
+            главный ресурс. Мы предлагаем каждому поучаствовать в создании <b>нового и классного!</b> Поддержите нас и
+            откройте для себя еще больше удобных функций в приложении.
+          </Styled.MotivationDescription>
 
-          <Styled.PossibilityWrapper>
-            <Styled.Cell>
-              <Styled.CellTitle>🚀 Platinum</Styled.CellTitle>
-
-              <Button scheme='primaryReverse'>50 000 руб.</Button>
-            </Styled.Cell>
-            <Styled.Cell>
-              <Styled.CellTitle>👩‍🚀 Gold</Styled.CellTitle>
-
-              <Button scheme='primaryReverse'>25 000 руб.</Button>
-            </Styled.Cell>
-            <Styled.Cell>
-              <Styled.CellTitle>🦾 Silver</Styled.CellTitle>
-
-              <Button scheme='primaryReverse'>10 000 руб.</Button>
-            </Styled.Cell>
-            <Styled.Cell>
-              <Styled.CellTitle>🏄‍♂️ Support</Styled.CellTitle>
-
-              <Button scheme='primaryReverse'>1 000 руб.</Button>
-            </Styled.Cell>
-          </Styled.PossibilityWrapper>
+          <Styled.DonateButtonWrapper>
+            <a href='https://sponsr.ru/check_point' target='_blank'>
+              <Styled.DonateButton scheme='primaryReverse'>❤️ Пожертвовать</Styled.DonateButton>
+            </a>
+          </Styled.DonateButtonWrapper>
         </Container>
-      </Styled.Possibility>
+      </Styled.Motivation>
+
+      <Styled.Features>
+        <Container>
+          <Styled.FeaturesTitle>Преимущейтва спонсоров</Styled.FeaturesTitle>
+          <Styled.FeaturesDescription>
+            Мы будем благорадны любой поддержке, но если вы задонатите больше{' '}
+            <b>500руб., то вы получите Premium подписку.</b> В неё входит много всего прикольного
+          </Styled.FeaturesDescription>
+
+          <Styled.FeaturesList>
+            <Styled.FeaturesItem>⚡️ Отображение “премиум”-статуса на аватарке</Styled.FeaturesItem>
+            <Styled.FeaturesItem>🌇 Анимированная аватарка</Styled.FeaturesItem>
+            <Styled.FeaturesItem>
+              🏡 Совместное обсуждение новых идей в ТГ-чате с создателями проекта
+            </Styled.FeaturesItem>
+            <Styled.FeaturesItem>☄️ Отображение секретных мест</Styled.FeaturesItem>
+            <Styled.FeaturesItem>🦾 Добавление новых полей в конструкторе мест</Styled.FeaturesItem>
+            <Styled.FeaturesItem>📈 Сбор и аналитика статистики</Styled.FeaturesItem>
+            <Styled.FeaturesItem>🪄 Возможность организовать онлайн-продажи</Styled.FeaturesItem>
+            <Styled.FeaturesItem>🤑 Кэшбэк за покупки внутри приложения</Styled.FeaturesItem>
+          </Styled.FeaturesList>
+
+          <Styled.DonateButtonWrapper>
+            <a href='https://sponsr.ru/check_point' target='_blank'>
+              <Styled.DonateButton scheme='primary'>🏄‍♂️ Получить премиум</Styled.DonateButton>
+            </a>
+          </Styled.DonateButtonWrapper>
+        </Container>
+      </Styled.Features>
+
+      <Styled.Sponsors>
+        <Container>
+          <Styled.SponsorsTitle>Спонсоры</Styled.SponsorsTitle>
+
+          <Styled.SponsorsWrapper>
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+            <SponsorCard />
+          </Styled.SponsorsWrapper>
+        </Container>
+      </Styled.Sponsors>
     </Styled.Root>
   )
 }

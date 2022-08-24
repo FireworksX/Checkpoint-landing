@@ -35,10 +35,15 @@ export const Navigation = styled.nav`
 `
 
 export const NavigationCell = styled.a<Props>`
-  padding: 15px 25px;
+  padding: 15px;
   border-radius: 40px;
   background: ${({ theme, isActive }) => isActive && theme.colors.typography.first};
-  ${({ theme }) => theme.typography.text_16_20};
+  ${({ theme }) => theme.typography.text_14_24};
   font-weight: 800;
   cursor: pointer;
+  white-space: nowrap;
+
+  ${scRespondTo.sm} {
+    ${({ theme }) => theme.typography.text_16_20};
+  }
 `

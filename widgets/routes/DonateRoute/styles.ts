@@ -11,15 +11,21 @@ interface Props {
 export const Root = styled(MainLayout)``
 
 export const Main = styled.section`
-  padding: 120px 0 100px 0;
+  padding: 160px 0 100px 0;
   background: ${({ theme }) => theme.colors.accent.first};
 `
 
 export const Goal = styled.div`
-  ${({ theme }) => theme.typography.text_26_30};
+  ${({ theme }) => theme.typography.text_20_24};
   margin-bottom: 15px;
+  text-align: center;
   color: ${({ theme }) => theme.colors.typography.fourth};
   font-weight: 800;
+
+  ${scRespondTo.sm} {
+    ${({ theme }) => theme.typography.text_26_30};
+    text-align: left;
+  }
 `
 
 export const GoalDescription = styled.div`
@@ -71,9 +77,13 @@ export const DonateWrapper = styled.div`
 `
 
 export const DonateText = styled.div`
-  ${({ theme }) => theme.typography.text_20_24};
+  ${({ theme }) => theme.typography.text_14_24};
   margin-bottom: 15px;
   color: ${({ theme }) => theme.colors.typography.fourth};
+
+  ${scRespondTo.sm} {
+    ${({ theme }) => theme.typography.text_20_24};
+  }
 `
 
 export const DonateInput = styled.input`
@@ -85,40 +95,99 @@ export const DonateInput = styled.input`
   margin-bottom: 25px;
 `
 
-export const DonateButton = styled(Button)``
+export const DonateButton = styled(Button)`
+`
 
-export const Possibility = styled.section`
+export const DonateButtonWrapper = styled.div`
+  text-align: center;
+  margin-top: 35px;
+`
+
+export const Motivation = styled.section`
   padding: 120px 0 100px 0;
   background: ${({ theme }) => theme.colors.background.first};
-  min-height: 100vh;
 `
 
-export const PossibilityTitle = styled.h1`
-  ${({ theme }) => theme.typography.text_38_44};
-  margin-bottom: 15px;
+export const MotivationDescription = styled.p`
+  ${({ theme }) => theme.typography.text_20_24};
   color: ${({ theme }) => theme.colors.typography.first};
-  font-weight: 800;
   text-align: center;
-`
-
-export const PossibilityWrapper = styled.div`
-  display: grid;
-  grid-gap: 60px;
-  grid-template-columns: 1fr;
 
   ${scRespondTo.sm} {
-    grid-gap: 100px;
-    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: 0 auto;
   }
 `
 
-export const Cell = styled.div`
-  text-align: center;
+export const Features = styled.section`
+  padding: 120px 0 100px 0;
+  background: ${({ theme }) => theme.colors.accent.second};
+  min-height: 100vh;
 `
 
-export const CellTitle = styled.div`
-  ${({ theme }) => theme.typography.text_18_22};
-  font-weight: 800;
+export const FeaturesTitle = styled.h2`
+  ${({ theme }) => theme.typography.text_32_38};
   color: ${({ theme }) => theme.colors.typography.first};
-  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 800;
+`
+
+export const FeaturesDescription = styled.p`
+  ${({ theme }) => theme.typography.text_20_24};
+  color: ${({ theme }) => theme.colors.typography.first};
+  text-align: center;
+  margin-bottom: 100px;
+
+  ${scRespondTo.sm} {
+    width: 50%;
+    margin: 0 auto 100px auto;
+  }
+`
+
+export const FeaturesList = styled.ul`
+  padding: 0;
+  list-style-type: none;
+
+  ${scRespondTo.sm} {
+    width: 50%;
+    margin: 0 auto;
+  }
+`
+
+export const FeaturesItem = styled.li`
+  padding: 10px 0;
+  ${({ theme }) => theme.typography.text_20_24};
+  color: ${({ theme }) => theme.colors.typography.first};
+`
+
+export const Sponsors = styled.section`
+  padding: 120px 0 100px 0;
+  background: ${({ theme }) => theme.colors.accent.fifth};
+  min-height: 100vh;
+`
+
+export const SponsorsTitle = styled.h2`
+  ${({ theme }) => theme.typography.text_32_38};
+  color: ${({ theme }) => theme.colors.typography.first};
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 50px;
+`
+
+export const SponsorsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 40px;
+
+  ${scRespondTo.sm} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  ${scRespondTo.md} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  ${scRespondTo.xl} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `
